@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 const app = express()
 const port = process.env.PORT || 5000;
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes', { useNewUrlParser: true });
 const bodyParser = require('body-parser');
 
 const Review = require('./models/review');
