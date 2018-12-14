@@ -10,6 +10,7 @@ module.exports = (app, Comment) => {
             console.log(err.message);
         });
     });
+    
 
     // DELETE Comment
     app.delete('/reviews/comments/:id', function (req, res) {
